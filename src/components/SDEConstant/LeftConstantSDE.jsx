@@ -1,7 +1,7 @@
 import React from "react";
-import SectionScroll from "./utils/SectionScroll";
+import SectionScroll from "../utils/SectionScroll";
 
-const LeftConstant = () => {
+const LeftConstantSDE = () => {
   return (
     // <header class="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
 

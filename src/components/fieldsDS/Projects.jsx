@@ -1,4 +1,4 @@
-// src/components/fields/Projects.jsx
+// src/components/fieldsDS/Projects.jsx
 import React from "react";
 import ProjectCard from "../utils/ProjectCard";
 import AlgoB from "../../images/AlgoB.jpeg";
@@ -7,6 +7,8 @@ import MovieR from "../../images/MovieR.jpeg";
 import SpendShare from "../../images/SpendShare.jpeg";
 
 const Projects = () => {
+  const youtubeVideoUrl = "https://www.youtube.com/watch?v=gnSt82HxmMc";
+
   return (
     <div id="projects" className="p-[50px] md:pt-[100px] md:pl-[100px]">
       <h2
@@ -42,7 +44,7 @@ const Projects = () => {
           "Data Analysis"
         ]}
         project_image={AlgoB}
-        youtube_video_id="dQw4w9WgXcQ" // Example YouTube video ID
+        youtube_video_url={youtubeVideoUrl}
       />
 
       <ProjectCard
@@ -54,7 +56,7 @@ const Projects = () => {
         project_url="https://github.com/Bhavya-Ahir/Movie-Recommendation-System"
         tech_used={["Machine Learning", "Django", "Django REST Framework"]}
         project_image={MovieR}
-        youtube_video_id="dQw4w9WgXcQ" // Example YouTube video ID
+        youtube_video_url={youtubeVideoUrl}
       />
 
       <ProjectCard
@@ -68,7 +70,7 @@ const Projects = () => {
         project_url="https://github.com/Bhavya-Ahir/Public-Works"
         tech_used={["Deep Learning", "Image Classification"]}
         project_image={FWMS}
-        youtube_video_id="dQw4w9WgXcQ" // Example YouTube video ID
+        youtube_video_url={youtubeVideoUrl}
       />
 
       <ProjectCard
@@ -81,7 +83,7 @@ const Projects = () => {
         project_url="https://github.com/Bhavya-Ahir/SpendandShare"
         tech_used={["Java", "Android App Development", "Android Studio"]}
         project_image={SpendShare}
-        youtube_video_id="dQw4w9WgXcQ" // Example YouTube video ID
+        youtube_video_url={youtubeVideoUrl}
       />
     </div>
   );

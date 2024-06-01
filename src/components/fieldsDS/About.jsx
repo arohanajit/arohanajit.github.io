@@ -15,8 +15,7 @@ const About = () => {
       </p>
 
       <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400 text-justify">
-        At <span className="font-bold text-slate-200">NC State</span>, I'm diving deep into the realms of algorithms, software engineering, 
-        <span className="font-bold text-slate-200">cloud computing</span>, and <span className="font-bold text-slate-200">neural networks</span>. 
+        At <span className="font-bold text-slate-200">NC State</span>, I'm diving deep into the realms of algorithms, software engineering, <span className="font-bold text-slate-200">cloud computing</span>, and <span className="font-bold text-slate-200">neural networks</span>. 
         Armed with a versatile tech stack that includes <span className="font-bold text-teal-300">Python, R, C++, MATLAB, </span> and frameworks like 
          <span className="font-bold text-teal-300"> Django, Flask, and PyTorch</span>, I've been working on projects that push 
         the boundaries of what's possible with machine learning. From hate speech detection and CGM neural network optimization to developing Python packages and 
@@ -25,7 +24,7 @@ const About = () => {
 
       <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400 text-justify">
         When I’m not at the computer, I’m usually trekking, spending time with
-        my friends, or watching <span className="font-bold text-teal-300">Formula One</span>.
+        my friends, playing Lawn Tennis or Working Out.
       </p>
     </div>
   );

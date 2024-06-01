@@ -16,7 +16,7 @@ const Experience = () => {
 
       <ExperienceCard
         timeline="May 2020 - May 2022"
-        role="machine Learning Engineer"
+        role="Machine Learning Engineer"
         name="Omdena"
         description={[
           <>

@@ -1,14 +1,11 @@
-// src/components/fieldsDS/Projects.jsx
 import React from "react";
-import ProjectCard from "../utils/ProjectCard";
-import AlgoB from "../../images/AlgoB.jpeg";
+import ProjectCard from "../utilsDS/ProjectCard";
+import Face from "../../images/face.webp";
 import FWMS from "../../images/FWMS.jpeg";
 import MovieR from "../../images/MovieR.jpeg";
-import SpendShare from "../../images/SpendShare.jpeg";
+import Urban from "../../images/urban.webp";
 
 const Projects = () => {
-  const youtubeVideoUrl = "https://www.youtube.com/watch?v=gnSt82HxmMc";
-
   return (
     <div id="projects" className="p-[50px] md:pt-[100px] md:pl-[100px]">
       <h2
@@ -16,74 +13,60 @@ const Projects = () => {
         className="font-bold uppercase pb-[40px] text-[#01e2c7]"
       >
         Projects
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-          className="inline-block h-5 w-5 ml-2"
-        >
-          <path
-            fillRule="evenodd"
-            d="M5.22 7.22a.75.75 0 011.06 0L10 10.94l3.72-3.72a.75.75 0 111.06 1.06l-4 4a.75.75 0 01-1.06 0l-4-4a.75.75 0 010-1.06z"
-            clipRule="evenodd"
-          />
-        </svg>
       </h2>
       <ProjectCard
-        project_title="Algo Trading Bot"
+        project_title="Recurrent Neural Network - LSTM - Script Generation"
         project_description={[
-          "Developed an automated trading system that harnesses NLP to identify trending stocks and uses ROCE for filtering.",
-          "Employed trading algorithms for optimal buy/sell decisions.",
-          "Constructed a trade management system using Django, integrated with the Alpaca API for mock trades and comprehensive back-testing of strategies.",
-          "Yielded valuable insights and a humorous admission of initial losses, enriching the learning curve in algo trading."
+          "Developed a Recurrent Neural Network (RNN/LSTM) based model to generate TV scripts in the style of the sitcom Seinfeld,",
+          "achieving a novel application of text generation and natural language processing. Utilized PyTorch for model development,",
+          "training the network on a dataset of TV scripts over 10 epochs, and successfully reduced the loss from 4.74 to approximately",
+          "3.00, demonstrating the model's learning efficiency and capability to generate coherent text."
         ]}
-        project_url="https://github.com/Bhavya-Ahir/Trading-Bot"
+        project_url="https://github.com/arohanajit/tv-script-generation"
         tech_used={[
-          "Natural Language Processing (NLP)",
-          "Data Science",
-          "Data Analysis"
+          "Python",
+          "PyTorch",
+          "Recurrent Neural Networks",
+          "Long Short-Term Memory (LSTM)"
         ]}
-        project_image={AlgoB}
-        youtube_video_url={youtubeVideoUrl}
-      />
-
-      <ProjectCard
-        project_title="Movie Recommendation System"
-        project_description={[
-          "Created a dynamic movie recommendation system using Collaborative filtering and K-Means clustering for personalized suggestions.",
-          "Deployed the machine learning model as a web application on PythonAnywhere using the Django Framework for easy access."
-        ]}
-        project_url="https://github.com/Bhavya-Ahir/Movie-Recommendation-System"
-        tech_used={["Machine Learning", "Django", "Django REST Framework"]}
         project_image={MovieR}
-        youtube_video_url={youtubeVideoUrl}
+        youtube_video_url="https://www.youtube.com/watch?v=your-video-id-1"
       />
-
       <ProjectCard
-        project_title="Food Waste Management System"
+        project_title="Generative Adversarial Network - Face Generation"
         project_description={[
-          "Engineered a neural network model using YOLOv3 for real-time identification and classification of waste materials.",
-          "Acquired and labeled a training dataset through Python web scraping, achieving a mean average precision of 95.7% and prediction accuracy of 80%.",
-          "Integrated inventory prediction techniques with smart dustbins using object detection to optimize raw material usage and reduce food waste.",
-          "Implemented a SARIMAX model for precise inventory forecasting and time series analysis, enhancing inventory management efficiency."
+          "Developed a sophisticated Generative Adversarial Network (GAN) capable of generating realistic human faces, leveraging TensorFlow/Keras",
+          "and advanced CNN techniques. Achieved significant milestones in model accuracy and efficiency through iterative training and optimization,",
+          "demonstrating capabilities in neural network design and machine learning algorithms."
         ]}
-        project_url="https://github.com/Bhavya-Ahir/Public-Works"
-        tech_used={["Deep Learning", "Image Classification"]}
+        project_url="https://github.com/arohanajit/face-generation-gan"
+        tech_used={["Python", "Convolutional Neural Networks", "Generatuve Adversarial Networks", "TensorFlow"]}
+        project_image={Face}
+        youtube_video_url="https://www.youtube.com/watch?v=your-video-id-2"
+      />
+      <ProjectCard
+        project_title="Python Package - `imgdata`"
+        project_description={[
+          "Developed a Python package, a tool for automating the collection and organization of image datasets from popular stock image APIs like",
+          "Pexels and Unsplash. The package supports image downloading, and dataset structuring into train, test, and validation sets, significantly",
+          "streamlining the data preparation process for machine learning projects."
+          ]}
+        project_url="https://pypi.org/project/imgdata/"
+        tech_used={["Python", "Flask", "Django"]}
         project_image={FWMS}
-        youtube_video_url={youtubeVideoUrl}
+        youtube_video_url="https://www.youtube.com/watch?v=your-video-id-3"
       />
-
       <ProjectCard
-        project_title="Spend & Share"
+        project_title="Urban Neighborhood"
         project_description={[
-          "Designed an app to split expenses among friends where users can add bills and members.",
-          "The app calculates owed amounts automatically, simplifying financial sharing.",
-          "Automates calculations for owed amounts to manage group expenses seamlessly."
+          "Quantified and visualized urban data from multiple cities, applying advanced data cleaning, preprocessing, and analysis techniques to handle",
+          "complex datasets, clustering 194+ neighborhoods by venue data (Foursquare API) and visualized results to present actionable insights into",
+          "urban planning and development and achieving a deep understanding of city dynamics through geospatial and statistical analysis"
         ]}
-        project_url="https://github.com/Bhavya-Ahir/SpendandShare"
-        tech_used={["Java", "Android App Development", "Android Studio"]}
-        project_image={SpendShare}
-        youtube_video_url={youtubeVideoUrl}
+        project_url="https://github.com/arohanajit/City_Analysis/blob/master/Ideal%20Neighborhood%20in%20Bangalore.pdf"
+        tech_used={["Data Science", "Data Analysis", "Data Visualization"]}
+        project_image={Urban}
+        youtube_video_url="https://www.youtube.com/watch?v=your-video-id-4"
       />
     </div>
   );

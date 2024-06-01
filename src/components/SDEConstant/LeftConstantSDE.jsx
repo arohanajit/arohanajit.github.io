@@ -16,7 +16,7 @@ const LeftConstantSDE = () => {
       </h2>{" "}
       {/* <h2 class="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">CS Grad at NCSU</h2> */}
       <p class="mt-4 max-w-xs leading-normal text-gray-500 dark:text-gray-400">
-        Aspiring SDE and ML Enthusiast.
+        Aspiring SDE
       </p>
       {/* <h2 class="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">CS Grad at <span style="color:#771d1d;">NCSU</span></h2> */}
       <ul className="pt-[20px]">
@@ -113,4 +113,4 @@ const LeftConstantSDE = () => {
   );
 };
 
-export default LeftConstant;
+export default LeftConstantSDE;

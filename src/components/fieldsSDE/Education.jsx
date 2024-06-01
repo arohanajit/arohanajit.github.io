@@ -38,7 +38,7 @@ const Experience = () => {
               August 2023 - December 2024
             </time>
             <p className="text-base italic font-normal text-gray-500 dark:text-gray-400">
-              Master of Science in Computer Science | GPA: 4.0/4.0
+              Master of Science in Computer Science | GPA: 3.7/4.0
             </p>
           </li>
           <li className="mb-10 ml-6">
@@ -62,13 +62,13 @@ const Experience = () => {
               </svg>
             </span>
             <h3 className="mb-1 text-lg font-semibold text-gray-900 text-white">
-              Sardar Patel Institute of Technology
+              Kalinga Institute of Industrial Technology
             </h3>
             <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-              August 2017 - May 2021
+              August 2017 - August 2021
             </time>
             <p className="text-base italic font-normal text-gray-500 dark:text-gray-400">
-              Bachelor of Technology, Computer Science | GPA: 3.7/4.0
+              Bachelor of Technology, Computer Science | GPA: 3.5/4.0
             </p>
           </li>
         </ol>
@@ -78,7 +78,7 @@ const Experience = () => {
         <a
           class="inline-flex items-center font-medium leading-tight text-slate-200 font-semibold text-slate-200 group"
           aria-label="View Résumé"
-          href="https://drive.google.com/file/d/1SJmfvD0Fd0x90T5LoKwzxmcsWNoyhj7F/view?usp=sharing"
+          href="https://drive.google.com/file/d/14udIh_fvFx6hiLlm31tItRRM30Z3rJWn/view?usp=sharing"
           target="_blank"
         >
           <span>

@@ -1,8 +1,8 @@
 import React from "react";
-import Experience from "../fields/Experience";
-import About from "../fields/About";
-import Projects from "../fields/Projects";
-import Education from "../fields/Education";
+import Experience from "../fieldsSDE/Experience";
+import About from "../fieldsSDE/About";
+import Projects from "../fieldsSDE/Projects";
+import Education from "../fieldsSDE/Education";
 
 const RightConstantSDE = () => {
   return (
@@ -15,4 +15,4 @@ const RightConstantSDE = () => {
   );
 };
 
-export default RightConstant;
+export default RightConstantSDE;

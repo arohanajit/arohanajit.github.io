@@ -1,6 +1,6 @@
 {
-  "homepage": "https://arohanajit.github.io/website",
-  "name": "portfolio-app",
+  "homepage": "https://arohanajit.github.io/",
+  "name": "portfolio-sde-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

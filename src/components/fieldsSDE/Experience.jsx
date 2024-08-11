@@ -13,6 +13,41 @@ const Experience = () => {
       >
         Experience
       </h2>
+      <ExperienceCard
+        timeline="June 2024 - Present"
+        role="Software Development Intern"
+        name="Chirpn, San Jose"
+        description={[
+          <>
+            Engineered and optimized critical API endpoints using Node.js and Express, improving data processing efficiency by <span className="font-medium text-slate-200">25%</span> and reducing server response times by <span className="font-medium text-slate-200">30%</span>.
+          </>,
+          <>
+            Implemented job scheduling mechanisms resulting in a <span className="font-medium text-slate-200">40% decrease</span> in document synchronization latency.
+          </>,
+          <>
+            Developed robust middleware solutions for API request validation and user authentication, ensuring <span className="font-medium text-slate-200">100% compliance</span> with security standards.
+          </>,
+          <>
+            Collaborated on full-stack development, integrating React components with backend APIs to enhance user interface responsiveness.
+          </>,
+          <>
+            Utilized Prisma ORM to manage and optimize database schemas, leading to a <span className="font-medium text-slate-200">15% improvement</span> in query performance.
+          </>,
+          <>
+            Containerized the application using Docker, reducing deployment time by <span className="font-medium text-slate-200">30%</span> and ensuring consistent performance across environments.
+          </>,
+        ]}
+        skills={[
+          "Node.js",
+          "Express",
+          "React",
+          "Docker",
+          "Prisma ORM",
+          "API Development",
+          "Full-stack Development"
+        ]}
+      />
+
 
       <ExperienceCard
         timeline="May 2021 - July 2023"

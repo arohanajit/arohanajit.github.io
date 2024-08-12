@@ -30,7 +30,7 @@ const ProjectCard = props => {
           <ul className="mt-2 flex flex-wrap" aria-label="Technologies used:">
             {tech_used.map((tech, index) => (
               <li key={index} className="mr-1.5 mt-2">
-                <div className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">{tech}</div>
+                <div className="flex items-center rounded-full bg-[#04d9ff]/10 px-3 py-1 text-xs font-medium leading-5 text-[#04d9ff] mr-2 mb-2">{tech}</div>
               </li>
             ))}
           </ul>
@@ -40,7 +40,7 @@ const ProjectCard = props => {
       </div>
       <div className="mt-4">
             <h4 className="font-medium text-slate-200">Demo</h4>
-            <a href={youtube_video_url} target="_blank" rel="noopener noreferrer" className="text-teal-300 hover:underline">
+            <a href={youtube_video_url} target="_blank" rel="noopener noreferrer" className="text-[#04d9ff] hover:underline">
               Watch on YouTube
             </a>
           </div>

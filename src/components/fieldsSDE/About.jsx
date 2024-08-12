@@ -1,41 +1,37 @@
 import React from "react";
+import TypingAnimation from "../TypingAnimation";
 
 const About = () => {
   return (
-    <div id="about" className="p-[50px] md:pl-[100px] md:pr-[50px] md:py-[100px]">
-      <h2 id="about-title" className="font-bold uppercase pb-[20px] text-[#01e2c7]">
-        About
+    <div id="about" className="p-6 bg-gray-800 rounded-lg shadow-lg">
+      <h2 id="about-title" className="text-2xl font-bold mb-4 text-[#04d9ff]">
+        About Me
       </h2>
-      <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
-        Hey there! I'm Arohan, a software developer with a background in Information Technology from Kalinga Institute of Industrial Technology, I've been honing my skills in web development and cloud computing. My journey has taken me from the halls of academia to the dynamic world of{" "}
-        <a className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300" href="https://www.accenture.com/" target="_blank" rel="noreferrer">
+      <TypingAnimation />
+      <p className="mt-4 text-gray-300 font-mono">
+        Hey there! I'm Arohan, a full stack developer with a knack for building robust and scalable web applications. With a strong foundation in Computer Science from Kalinga Institute of Industrial Technology and currently pursuing my Master's at NC State, I've been honing my skills across the entire development stack.
+      </p>
+      <p className="mt-4 text-gray-300 font-mono">
+        My journey has taken me from crafting dynamic web applications at{" "}
+        <a className="text-[#04d9ff] hover:underline" href="https://www.accenture.com/" target="_blank" rel="noreferrer">
           Accenture
         </a>{" "}
-        where I've had the opportunity to work as a Software Development Associate working with a delightful mix of technologies like <span className="font-bold text-teal-300">React JS, Django</span> to deliver scalable and highly secure applications for one of the biggest financial institutions in the world.
+        to my current role as a{" "}
+        <span className="text-[#04d9ff]">Software Development Intern</span> at{" "}
+        <a className="text-[#04d9ff] hover:underline" href="https://chirpn.com/" target="_blank" rel="noreferrer">
+          Chirpn
+        </a>{" "}
+        in <span className="text-[#04d9ff]">San Jose</span>. Here, I'm optimizing critical API endpoints, implementing secure middleware solutions, and enhancing user interfaces with React. I thrive on leveraging technologies like Node.js, Express, and various cloud platforms to create efficient, secure, and user-centric solutions.
       </p>
-      <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
-        My current focus is on expanding my understanding of various technology sectors and strengthening my <span className="font-bold text-teal-300">computer science fundamentals</span>. I also dedicate time to contributing to <span className="font-bold text-slate-200">open-source projects</span>, which helps me stay connected with the global tech community and continuously improve my coding skills.
-      </p>
-      <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
-        When it comes to tech stacks, I have experience with the following:
-        <ul className="list-disc pl-6 mt-2">
-          <li>
-            <span className="font-bold text-teal-300">Front End:</span> React JS, HTML, CSS, JavaScript
-          </li>
-          <li>
-            <span className="font-bold text-teal-300">Back End:</span> Django, Node.js, Flask
-          </li>
-          <li>
-            <span className="font-bold text-teal-300">Databases:</span> MySQL, MongoDB, PostgreSQL
-          </li>
-          <li>
-            <span className="font-bold text-teal-300">Certifications:</span> <a href="https://www.credly.com/badges/5e606db7-c101-4e69-afeb-9f7f8cebf55d?source=linked_in_profile"><u>Azure Cloud Fundamentals</u></a>
-          </li>
+      <div className="mt-6 bg-gray-700 p-4 rounded-md">
+        <h3 className="text-xl font-semibold mb-2 text-[#04d9ff]">Tech Stack:</h3>
+        <ul className="list-disc pl-6 text-gray-300 font-mono">
+          <li><span className="text-[#04d9ff]">Front End:</span> React JS, HTML, CSS, JavaScript</li>
+          <li><span className="text-[#04d9ff]">Back End:</span> Django, Node.js, Flask</li>
+          <li><span className="text-[#04d9ff]">Databases:</span> MySQL, MongoDB, PostgreSQL</li>
+          <li><span className="text-[#04d9ff]">Cloud:</span> AWS, Azure</li>
         </ul>
-      </p>
-      <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
-        When I'm not at the computer, I'm usually trekking, spending time with my friends, or watching <span className="font-bold text-teal-300">Soccer</span>.
-      </p>
+      </div>
     </div>
   );
 };

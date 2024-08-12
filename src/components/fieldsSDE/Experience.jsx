@@ -9,7 +9,7 @@ const Experience = () => {
     >
       <h2
         id="experience-title"
-        class="font-bold uppercase pb-[20px] text-[#01e2c7]"
+        class="font-bold uppercase pb-[20px] text-[#04c1e2]"
       >
         Experience
       </h2>
@@ -49,40 +49,7 @@ const Experience = () => {
       />
 
 
-      <ExperienceCard
-        timeline="May 2021 - July 2023"
-        role="Software Development Associate"
-        name="Accenture"
-        description={[
-          <>
-            Developed and maintained dynamic, responsive web applications using <span className="font-medium text-teal-300">React JS </span> for the front end and Django for the backend, 
-            delivering high-quality solutions to clients
-          </>,
-          <>
-            Implemented clean, reusable, and modular code using React components and hooks, resulting in a 
-            <span className="font-medium text-slate-200">
-            20% increase
-            </span>{" "}
-            in efficiency.
-          </>,
-          <>
-            Utilized Django's powerful features, such as <span className="font-medium text-teal-300">ORM and REST framework </span>, to build scalable and secure backend systems, handling over {" "}
-            <span className="font-medium text-slate-200">10,000 monthly requests</span>.
-          </>,
-          <>
-            Integrated React with Django using <span className="font-medium text-teal-300">RESTful APIs</span>, ensuring seamless communication between the front end and backend.
-          </>,
-          <>
-          Collaborated with a team of 3+ back-end developers and web designers to improve usability, achieving a <span className="font-medium text-slate-200">15% increase</span> in user satisfaction.
-          </>
-        ]}
-        skills={[
-          "REact JS",
-          "Django",
-          "Cloud Deployment",
-          "RESTful APIs",
-        ]}
-      />
+
 
       <ExperienceCard
         timeline="September 2018 - June 2021"

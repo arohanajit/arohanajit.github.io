@@ -5,7 +5,7 @@ const Experience = () => {
     <div id="education" className="p-[50px] md:px-[100px] md:pt-[100px]">
       <h2
         id="education-title"
-        className="font-bold uppercase pb-[40px] text-[#01e2c7]"
+        className="font-bold uppercase pb-[40px] text-[#04c1e2]"
       >
         EDUCATION
       </h2>
@@ -21,7 +21,7 @@ const Experience = () => {
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
-                stroke="#01e2c7"
+                stroke="#04c1e2"
                 className="w-6 h-6"
               >
                 <path
@@ -51,7 +51,7 @@ const Experience = () => {
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
-                stroke="#01e2c7"
+                stroke="#04c1e2"
                 className="w-6 h-6"
               >
                 <path

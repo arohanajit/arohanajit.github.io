@@ -11,7 +11,7 @@ const LeftConstantDS = () => {
       <h2 class="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">
         {" "}
         CS Grad Student at{" "}
-        <span style={{ color: "#01e2c7", fontWeight: "bold" }}>NCSU</span>{" "}
+        <span style={{ color: "#04c1e2", fontWeight: "bold" }}>NCSU</span>{" "}
       </h2>{" "}
       <p class="mt-4 max-w-xs leading-normal text-gray-500 dark:text-gray-400">
         Aspiring ML Enthusiast.
@@ -31,7 +31,7 @@ const LeftConstantDS = () => {
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"
-              fill="#01e2c7"
+              fill="#04c1e2"
               class="h-6 w-6"
               aria-hidden="true"
             >
@@ -50,7 +50,7 @@ const LeftConstantDS = () => {
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
-              fill="#01e2c7"
+              fill="#04c1e2"
               class="h-6 w-6"
               aria-hidden="true"
             >
@@ -69,7 +69,7 @@ const LeftConstantDS = () => {
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
-              fill="#01e2c7"
+              fill="#04c1e2"
               class="w-6 h-6"
             >
               <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />

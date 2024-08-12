@@ -1,156 +1,56 @@
 import React, { useState, useEffect } from "react";
-import { motion, useAnimation } from "framer-motion";
 import { Link } from "react-scroll";
 
 const SectionScroll = () => {
-  const [showHoverEffectAbout, setShowHoverEffectAbout] = useState(false);
-  const [showHoverEffectEducation, setShowHoverEffectEducation] =
-    useState(false);
-  const [showHoverEffectExperience, setShowHoverEffectExperience] =
-    useState(false);
-  const [showHoverEffectProjects, setShowHoverEffectProjects] = useState(false);
+  const [activeSection, setActiveSection] = useState("about");
 
   useEffect(() => {
-    const targetSectionAbout = document.querySelector("#about-title"); // Replace with your section's ID
-    const targetSectionEducation = document.querySelector("#education-title");
-    const targetSectionExperience = document.querySelector("#experience-title");
-    const targetSectionProjects = document.querySelector("#project-title");
-
     const handleScroll = () => {
-      if (targetSectionAbout) {
-        setTimeout(() => {
-          const isInView = isInViewport(targetSectionAbout);
-          console.log("Education Is in view:", isInView);
-          setShowHoverEffectAbout(isInView);
-        }, 100); // Adjust the delay as needed
-      }
-      if (targetSectionEducation) {
-        setTimeout(() => {
-          const isInView =
-            isInViewport(targetSectionEducation) &&
-            !isInViewport(targetSectionAbout);
-          console.log("Education Is in view:", isInView);
-          setShowHoverEffectEducation(isInView);
-        }, 100); // Adjust the delay as needed
-      }
-      if (targetSectionExperience) {
-        setTimeout(() => {
-          const isInView =
-            isInViewport(targetSectionExperience) &&
-            !isInViewport(targetSectionEducation);
-          console.log("Experience Is in view:", isInView);
-          setShowHoverEffectExperience(isInView);
-        }, 100); // Adjust the delay as needed
-      }
-      if (targetSectionProjects) {
-        setTimeout(() => {
-          const isInView =
-            isInViewport(targetSectionProjects) &&
-            !isInViewport(targetSectionExperience);
-          console.log("Projects Is in view:", isInView);
-          setShowHoverEffectProjects(isInView);
-        }, 100); // Adjust the delay as needed
+      const sections = ["about", "education", "experience", "projects"];
+      const currentSection = sections.find(section => {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          return rect.top <= 100 && rect.bottom >= 100;
+        }
+        return false;
+      });
+      if (currentSection) {
+        setActiveSection(currentSection);
       }
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const isInViewport = (element) => {
-    const rect = element.getBoundingClientRect();
-    return rect.top >= 0 && rect.bottom <= window.innerHeight;
-  };
+  const navItems = [
+    { id: "about", label: "ABOUT" },
+    { id: "education", label: "EDUCATION" },
+    { id: "experience", label: "EXPERIENCE" },
+    { id: "projects", label: "PROJECTS" },
+  ];
 
   return (
-    <div>
-      <li>
-        <Link to="about" spy={true} smooth={true} offset={0} duration={500}>
-          <div class="group flex items-center py-2 active">
-            <span
-              class={`nav-indicator mr-4 h-px transition-all group-hover:w-16 group-hover:bg-[#01e2c7] group-focus-visible:w-16 group-focus-visible:bg-[#01e2c7] ${
-                showHoverEffectAbout ? "bg-[#01e2c7] w-16" : "w-8 bg-slate-400"
-              }`}
-            ></span>
-            <span
-              class={`nav-text text-xs font-bold uppercase tracking-widest group-hover:text-[#01e2c7] group-focus-visible:text-[#01e2c7] ${
-                showHoverEffectAbout ? "text-[#01e2c7]" : "text-slate-400"
-              }`}
-            >
-              About
-            </span>
-          </div>
-        </Link>
-      </li>
-      <li>
-        <Link to="education" spy={true} smooth={true} offset={0} duration={500}>
-          <div class="group flex items-center py-2 active">
-            <span
-              class={`nav-indicator mr-4 h-px transition-all group-hover:w-16 group-hover:bg-[#01e2c7] group-focus-visible:w-16 group-focus-visible:bg-[#01e2c7] ${
-                showHoverEffectEducation
-                  ? "bg-[#01e2c7] w-16"
-                  : "w-8 bg-slate-400"
-              }`}
-            ></span>
-            <span
-              class={`nav-text text-xs font-bold uppercase tracking-widest group-hover:text-[#01e2c7] group-focus-visible:text-[#01e2c7] ${
-                showHoverEffectEducation ? "text-[#01e2c7]" : "text-slate-400"
-              }`}
-            >
-              Education
-            </span>
-          </div>
-        </Link>
-      </li>
-      <li>
-        <Link
-          to="experience"
-          spy={true}
-          smooth={true}
-          offset={0}
-          duration={500}
-        >
-          <div class="group flex items-center py-2 active">
-            <span
-              class={`nav-indicator mr-4 h-px transition-all group-hover:w-16 group-hover:bg-[#01e2c7] group-focus-visible:w-16 group-focus-visible:bg-[#01e2c7] ${
-                showHoverEffectExperience
-                  ? "bg-[#01e2c7] w-16"
-                  : "w-8 bg-slate-400"
-              }`}
-            ></span>
-            <span
-              class={`nav-text text-xs font-bold uppercase tracking-widest group-hover:text-[#01e2c7] group-focus-visible:text-[#01e2c7] ${
-                showHoverEffectExperience ? "text-[#01e2c7]" : "text-slate-400"
-              }`}
-            >
-              Experience
-            </span>
-          </div>
-        </Link>
-      </li>
-      <li>
-        <Link to="projects" spy={true} smooth={true} offset={0} duration={500}>
-          <div class="group flex items-center py-2 active">
-            <span
-              class={`nav-indicator mr-4 h-px transition-all group-hover:w-16 group-hover:bg-[#01e2c7] group-focus-visible:w-16 group-focus-visible:bg-[#01e2c7] ${
-                showHoverEffectProjects
-                  ? "bg-[#01e2c7] w-16"
-                  : "w-8 bg-slate-400"
-              }`}
-            ></span>
-            <span
-              class={`nav-text text-xs font-bold uppercase tracking-widest group-hover:text-[#01e2c7] group-focus-visible:text-[#01e2c7] ${
-                showHoverEffectProjects ? "text-[#01e2c7]" : "text-slate-400"
-              }`}
-            >
-              Projects
-            </span>
-          </div>
-        </Link>
-      </li>
-    </div>
+    <ul className="space-y-4">
+      {navItems.map((item) => (
+        <li key={item.id}>
+          <Link
+            to={item.id}
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+            className={`flex items-center cursor-pointer transition-all duration-300 ${
+              activeSection === item.id ? "text-[#04d9ff]" : "text-gray-400"
+            }`}
+          >
+            <div className={`w-8 h-px ${activeSection === item.id ? "bg-[#04d9ff]" : "bg-gray-400"} mr-2`}></div>
+            <span className="text-sm font-semibold">{item.label}</span>
+          </Link>
+        </li>
+      ))}
+    </ul>
   );
 };
 

@@ -6,7 +6,7 @@ const About = () => {
       id="about"
       className="p-[50px] md:pl-[100px] md:pr-[50px] md:py-[100px]"
     >
-      <h2 id="about-title" className="font-bold uppercase pb-[20px] text-[#01e2c7]">
+      <h2 id="about-title" className="font-bold uppercase pb-[20px] text-[#04c1e2]">
         About
       </h2>
       <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400 text-justify">

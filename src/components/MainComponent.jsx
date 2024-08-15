@@ -1,11 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
-import ParticlesBackground from "./ParticlesBackground";
 
 const MainComponent = ({ LeftComponent, RightComponent }) => {
   return (
     <div className="bg-gray-900 min-h-screen">
-      <ParticlesBackground />
       <div className="lg:flex">
         <div className="lg:w-1/2">
           <LeftComponent />

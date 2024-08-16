@@ -78,7 +78,7 @@ const Experience = () => {
         <a
           class="inline-flex items-center font-medium leading-tight text-slate-200 font-semibold text-slate-200 group"
           aria-label="View Résumé"
-          href="https://1drv.ms/b/sAoaKoSlk9Oh2a2oCNy0Z3F9OTRw?e=8yyvwB"
+          href="https://drive.google.com/file/d/1xfvU3LhAGQ5a4wCbZOp1l4S6STCGjHQV/view?usp=sharing"
           target="_blank"
         >
           <span>

@@ -11,6 +11,7 @@ root.render(
     <Router>
       <Routes>
         <Route path="/portfolio/ds" element={<DSHomePage />} />
+        <Route path="/sde" element={<SDEHomePage />} />
         <Route path="/" element={<SDEHomePage />} />
       </Routes>
     </Router>

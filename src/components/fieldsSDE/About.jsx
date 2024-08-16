@@ -9,7 +9,7 @@ const About = () => {
       </h2>
       <TypingAnimation />
       <p className="mt-4 text-gray-300 font-mono">
-        Hey there! I'm Arohan, a full stack developer with a knack for building robust and scalable web applications. With a strong foundation in Computer Science from Kalinga Institute of Industrial Technology and currently pursuing my Master's at NC State, I've been honing my skills across the entire development stack.
+      As a passionate software developer with a Master's in Computer Science from North Carolina State University, I thrive on turning complex challenges into elegant solutions. My journey has taken me from crafting responsive web applications at Accenture to optimizing critical API endpoints at Chirpn. With expertise in Python, ReactJS, Node.js, and cloud technologies like AWS and Azure, I'm always eager to dive into new technologies and push the boundaries of what's possible.
       </p>
       <p className="mt-4 text-gray-300 font-mono">
         My journey has taken me from crafting dynamic web applications at{" "}

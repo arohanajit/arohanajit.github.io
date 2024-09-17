@@ -48,7 +48,34 @@ const Experience = () => {
         ]}
       />
 
-
+      <ExperienceCard
+        timeline="May 2021 - July 2023"
+        role="Software Development Associate"  
+        name="Accenture"
+        description={[
+          <>
+          Developed and maintained dynamic, responsive web applications with <span className="font-medium text-slate-200">React JS</span> for the front end and <span className="font-medium text-slate-200">Django</span> for the backend, delivering high-quality solutions to clients
+          </>,
+          <>
+          Implemented clean, reusable, and modular code through React components and hooks, resulting in a <span className="font-medium text-slate-200">20% increase</span> in development efficiency as measured by reduced development time
+          </>,
+          <>
+          Utilized Django's ORM and REST framework to build scalable and secure backend systems, handling over <span className="font-medium text-slate-200">10,000 monthly user requests</span> with a <span className="font-medium text-slate-200">99.9% uptime</span>
+          </>,
+          <>
+          Integrated React with Django via <span className="font-medium text-slate-200">RESTful APIs</span>, ensuring seamless communication and reducing front-end/backend interaction latency by 15%
+          </>,
+          <>
+          Collaborated with a team of 3 back-end developers to enhance web application <span className="font-medium text-slate-200">UI/UX</span>, increasing user satisfaction by 12% as per feedback surveys
+          </>,
+        ]}
+        skills={[
+          "Python",
+          "ReactJS",
+          "MongoDB",
+          "Django",
+        ]}
+      />
 
 
       <ExperienceCard

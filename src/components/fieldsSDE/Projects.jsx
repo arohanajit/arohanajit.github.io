@@ -30,7 +30,7 @@ const Projects = () => {
           "SQL"
         ]}
         project_image={MovieR}
-        youtube_video_url="https://www.youtube.com/watch?v=your-video-id-1"
+        youtube_video_url="https://www.youtube.com/watch?v=k9-jaQtyVlQ"
       />
       <ProjectCard
         project_title="MERN - Redux - Ecommerce Website"
@@ -54,7 +54,7 @@ const Projects = () => {
         project_url="https://github.com/arohanajit/polly"
         tech_used={["React","TypeScript","Tailwind CSS","AWS Lambda","Prisma ORM","Middy Middleware","Chart.js","Axios","Serverless Functions"]}
         project_image={FWMS}
-        youtube_video_url="https://www.youtube.com/watch?v=your-video-id-3"
+        youtube_video_url="https://www.youtube.com/watch?v=gO5nstBFB7I"
       />
     </div>
   );

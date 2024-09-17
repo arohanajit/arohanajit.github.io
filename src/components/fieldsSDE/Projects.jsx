@@ -30,7 +30,7 @@ const Projects = () => {
           "SQL"
         ]}
         project_image={MovieR}
-        youtube_video_url="https://www.youtube.com/watch?v=k9-jaQtyVlQ"
+        youtube_video_url="https://youtu.be/k9-jaQtyVlQ"
       />
       <ProjectCard
         project_title="MERN - Redux - Ecommerce Website"

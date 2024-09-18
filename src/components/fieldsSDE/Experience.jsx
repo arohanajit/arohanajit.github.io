@@ -85,7 +85,7 @@ const Experience = () => {
         description={[
           <>
           Developed and maintained the college entrepreneurship cell website, responsible for handling traffic ranging from <span className="font-medium text-slate-200">500 to 2000 daily hits</span>
-          depending on events.
+          depending on events
           </>,
           <>
           Built and deployed separate websites for various events hosted by the cell, ensuring a smooth user experience.

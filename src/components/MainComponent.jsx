@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
+// import { initBackgroundEffect } from "../backgroundEffect"; // Adjust the import path as necessary
 
 const MainComponent = ({ LeftComponent, RightComponent }) => {
+  // useEffect(() => {
+  //   initBackgroundEffect();
+  // }, []);
+
   return (
     <div className="bg-gray-900 min-h-screen">
+      <canvas></canvas>
       <div className="lg:flex">
         <div className="lg:w-1/3 p-4">
           <LeftComponent />

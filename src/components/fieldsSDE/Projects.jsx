@@ -10,7 +10,7 @@ const Projects = () => {
     <div id="projects" className="p-[50px] md:pt-[100px] md:pl-[100px]">
       <h2
         id="project-title"
-        className="font-bold uppercase pb-[40px] text-[#04c1e2]"
+        className="text-3xl font-bold mb-4 text-[#04d9ff]"
       >
         Projects
       </h2>

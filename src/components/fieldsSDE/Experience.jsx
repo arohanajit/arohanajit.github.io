@@ -9,7 +9,7 @@ const Experience = () => {
     >
       <h2
         id="experience-title"
-        class="font-bold uppercase pb-[20px] text-[#04c1e2]"
+        class="text-3xl font-bold mb-4 text-[#04d9ff]"
       >
         Experience
       </h2>

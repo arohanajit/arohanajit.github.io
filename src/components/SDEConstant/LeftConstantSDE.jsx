@@ -1,8 +1,8 @@
 import React from "react";
 import SectionScroll from "../utils/SectionScroll";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faGithub, faLinkedin  } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope, faFileAlt } from "@fortawesome/free-solid-svg-icons";
 
 const LeftConstantSDE = () => {
   return (
@@ -30,6 +30,9 @@ const LeftConstantSDE = () => {
           </a>
           <a href="https://www.linkedin.com/in/arohanajit" target="_blank" rel="noopener noreferrer" className="text-[#04d9ff] hover:text-white">
             <FontAwesomeIcon icon={faLinkedin} size="2x" />
+          </a>
+          <a href="https://1drv.ms/w/c/76e8f46429a18a86/EUNIXnbA74dBgWlc841ZaDMBUhn9QDxJpt6Ls7M5EIOCUQ?e=6jQnbQ" target="_blank" rel="noopener noreferrer" className="text-[#04d9ff] hover:text-white">
+            <FontAwesomeIcon icon={faFileAlt} size="2x" />
           </a>
         </div>
       </div>

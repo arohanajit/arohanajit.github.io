@@ -5,9 +5,9 @@ const Experience = () => {
     <div id="education" className="p-[50px] md:px-[100px] md:pt-[100px]">
       <h2
         id="education-title"
-        className="font-bold uppercase pb-[40px] text-[#04c1e2]"
+        className="text-3xl font-bold mb-4 text-[#04d9ff]"
       >
-        EDUCATION
+        Education
       </h2>
       <div className="pl-[20px] md:pl-[50px]">
         <ol className="pl-[30px] relative border-l border-gray-200 dark:border-gray-700">

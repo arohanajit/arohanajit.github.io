@@ -5,10 +5,10 @@ const MainComponent = ({ LeftComponent, RightComponent }) => {
   return (
     <div className="bg-gray-900 min-h-screen">
       <div className="lg:flex">
-        <div className="lg:w-1/2">
+        <div className="lg:w-1/3 p-4">
           <LeftComponent />
         </div>
-        <div className="lg:w-1/2 lg:ml-auto p-8">
+        <div className="lg:w-2/3 lg:ml-auto p-8">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}

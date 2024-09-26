@@ -16,25 +16,25 @@ const Experience = () => {
       <ExperienceCard
         timeline="June 2024 - Present"
         role="Software Development Intern"
-        name="Chirpn, San Jose"
+        name="Chirpn, San Jose, CA"
         description={[
           <>
-            Engineered and optimized critical API endpoints using Node.js and Express, improving data processing efficiency by <span className="font-medium text-slate-200">25%</span> and reducing server response times by <span className="font-medium text-slate-200">30%</span>.
+            Developed and optimized critical API endpoints using <span className="font-medium text-teal-300">Node.js and Express</span>, improving data processing efficiency by <span className="font-medium text-slate-200">25%</span> and reducing server response times by <span className="font-medium text-slate-200">30%</span>
           </>,
           <>
-            Implemented job scheduling mechanisms resulting in a <span className="font-medium text-slate-200">40% decrease</span> in document synchronization latency.
+            Collaborated with cross-functional teams to integrate <span className="font-medium text-teal-300">React components</span> with backend APIs, enhancing user interface responsiveness and reducing load times by <span className="font-medium text-slate-200">20%</span>
           </>,
           <>
-            Developed robust middleware solutions for API request validation and user authentication, ensuring <span className="font-medium text-slate-200">100% compliance</span> with security standards.
+            Managed and optimized database schemas using <span className="font-medium text-teal-300">Prisma ORM and MySQL</span>, leading to a <span className="font-medium text-slate-200">15%</span> improvement in query performance and ensuring data integrity.
           </>,
           <>
-            Collaborated on full-stack development, integrating React components with backend APIs to enhance user interface responsiveness.
+            Containerized applications using <span className="font-medium text-teal-300">Docker</span> and orchestrated with <span className="font-medium text-teal-300">Kubernetes</span>, reducing deployment time by <span className="font-medium text-slate-200">30%</span> and ensuring consistent performance across environments
           </>,
           <>
-            Utilized Prisma ORM to manage and optimize database schemas, leading to a <span className="font-medium text-slate-200">15% improvement</span> in query performance.
+            Implemented robust error handling and logging mechanisms, improving system reliability and facilitating faster issue resolution.
           </>,
           <>
-            Containerized the application using Docker, reducing deployment time by <span className="font-medium text-slate-200">30%</span> and ensuring consistent performance across environments.
+            Set up <span className="font-medium text-teal-300">Azure Active Directory</span> from scratch, integrating <span className="font-medium text-teal-300">RBAC</span> functionalities for more than <span className="font-medium text-slate-200">10 roles</span>
           </>,
         ]}
         skills={[
@@ -42,9 +42,40 @@ const Experience = () => {
           "Express",
           "React",
           "Docker",
+          "Azure",
+          "Cloud",
           "Prisma ORM",
           "API Development",
           "Full-stack Development"
+        ]}
+      />
+
+      <ExperienceCard
+        timeline="August 2024 - Present"
+        role="Graduate Research Assistant"
+        name="Center for Geospatial Analytics, NC State, Raleigh, NC"
+        description={[
+          <>
+            Enhanced GRASS GIS's ability to handle floating-point maps by working with quantization algorithms for raster data processing..
+          </>,
+          <>
+            Improved code quality by eliminating Ruff and Flake8 errors, ensuring adherence to PEP 8 standards and contributing to overall project maintainability
+          </>,
+          <>
+            Developed robust middleware solutions for API request validation and user authentication, ensuring <span className="font-medium text-slate-200">100% compliance</span> with security standards.
+          </>,
+          <>
+            Collaborated with a team to optimize large-scale data processing algorithms, resulting in a 40% reduction in computation time for complex geospatial analyses
+          </>,
+        ]}
+        skills={[
+          "Python",
+          "AWS",
+          "React",
+          "Docker",
+          "API Development",
+          "Backend Development",
+          "Debugging"
         ]}
       />
 
@@ -54,19 +85,22 @@ const Experience = () => {
         name="Accenture"
         description={[
           <>
-          Developed and maintained dynamic, responsive web applications with <span className="font-medium text-slate-200">React JS</span> for the front end and <span className="font-medium text-slate-200">Django</span> for the backend, delivering high-quality solutions to clients
+          Developed and maintained scalable, high-performance web applications using Java Spring Boot for the backend and ReactJS for the frontend, handling over 100,000 daily user requests with 99.99% uptime
           </>,
           <>
-          Implemented clean, reusable, and modular code through React components and hooks, resulting in a <span className="font-medium text-slate-200">20% increase</span> in development efficiency as measured by reduced development time
+          Implemented microservices architecture using Spring Cloud, improving system modularity and enabling independent scaling of application components
           </>,
           <>
           Utilized Django's ORM and REST framework to build scalable and secure backend systems, handling over <span className="font-medium text-slate-200">10,000 monthly user requests</span> with a <span className="font-medium text-slate-200">99.9% uptime</span>
           </>,
           <>
-          Integrated React with Django via <span className="font-medium text-slate-200">RESTful APIs</span>, ensuring seamless communication and reducing front-end/backend interaction latency by 15%
+          Built robust RESTful APIs, reducing frontend-backend interaction latency by 15% and improving overall application performance.
           </>,
           <>
-          Collaborated with a team of 3 back-end developers to enhance web application <span className="font-medium text-slate-200">UI/UX</span>, increasing user satisfaction by 12% as per feedback surveys
+          Streamlined Agile methodologies and CI/CD practices to streamline development processes, resulting in a 30% increase in team productivity.
+          </>,
+          <>
+          Collaborated with cross-functional teams to design and implement secure payment processing features, ensuring PCI DSS compliance
           </>,
         ]}
         skills={[

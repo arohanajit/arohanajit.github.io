@@ -33,18 +33,6 @@ const Projects = () => {
         youtube_video_url="https://youtu.be/k9-jaQtyVlQ"
       />
       <ProjectCard
-        project_title="MERN - Redux - Ecommerce Website"
-        project_description={[
-          "Developed a full-featured eCommerce platform using the MERN stack & Redux, showcased in eCommerce Platform, supporting product",
-          "management, user profiles, and PayPal integration. Enhanced experience with features like product reviews, search, pagination, and a ",
-          "complete checkout process, serving as a comprehensive solution for online retail."
-        ]}
-        project_url="https://github.com/arohanajit/e-commerce"
-        tech_used={["React", "Redux", "MongoDB", "Express", "Node.js"]}
-        project_image={Face}
-        youtube_video_url="https://www.youtube.com/watch?v=your-video-id-2"
-      />
-      <ProjectCard
         project_title="MERN - Real Time Interactive Web Application with Cloud Integration - Polly"
         project_description={[
           "Developed a real-time polling application using React for the frontend, incorporating Tailwind CSS for styling, Axios for HTTP requests, ",
@@ -55,6 +43,18 @@ const Projects = () => {
         tech_used={["React","TypeScript","Tailwind CSS","AWS Lambda","Prisma ORM","Middy Middleware","Chart.js","Axios","Serverless Functions"]}
         project_image={FWMS}
         youtube_video_url="https://www.youtube.com/watch?v=gO5nstBFB7I"
+      />
+      <ProjectCard
+        project_title="MERN - Redux - Ecommerce Website"
+        project_description={[
+          "Developed a full-featured eCommerce platform using the MERN stack & Redux, showcased in eCommerce Platform, supporting product",
+          "management, user profiles, and PayPal integration. Enhanced experience with features like product reviews, search, pagination, and a ",
+          "complete checkout process, serving as a comprehensive solution for online retail."
+        ]}
+        project_url="https://github.com/arohanajit/e-commerce"
+        tech_used={["React", "Redux", "MongoDB", "Express", "Node.js"]}
+        project_image={Face}
+        youtube_video_url="https://www.youtube.com/watch?v=your-video-id-2"
       />
     </div>
   );

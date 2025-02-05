@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import MainComponent from './components/MainComponent';
 import LeftConstantSDE from './components/SDEConstant/LeftConstantSDE';
 import RightConstantSDE from './components/SDEConstant/RightConstantSDE';

@@ -80,6 +80,7 @@ const Experience = () => {
           aria-label="View Résumé"
           href="https://drive.google.com/file/d/14udIh_fvFx6hiLlm31tItRRM30Z3rJWn/view?usp=sharing"
           target="_blank"
+          rel="noreferrer"
         >
           <span>
             <span class="border-b border-transparent pb-px transition group-hover:border-teal-300 motion-reduce:transition-none"></span>

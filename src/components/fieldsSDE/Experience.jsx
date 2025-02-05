@@ -15,7 +15,31 @@ const Experience = () => {
       </h2>
 
       <ExperienceCard
-        timeline="June 2024 - Present"
+        timeline="September 2024 - Present"
+        role="Graduate Research Assistant"
+        name="Center of Geospatial Analysis, NC State"
+        description={[
+          <>
+            Improved raster data storage efficiency by <span className="font-medium text-slate-200">25%</span> using quantization algorithms
+          </>,
+          <>
+            Contributing to GRASS GIS open source project, focusing on backend optimization and code quality
+          </>,
+          <>
+            Implemented comprehensive testing suite for geospatial analysis functions
+          </>
+        ]}
+        skills={[
+          "Python",
+          "Geospatial Analysis",
+          "Open Source",
+          "Testing",
+          "Optimization"
+        ]}
+      />
+
+      <ExperienceCard
+        timeline="June 2024 - Nov 2024"
         role="Software Development & Cloud Intern"
         name="Chirpn, San Jose, CA"
         description={[
@@ -51,29 +75,6 @@ const Experience = () => {
         ]}
       />
 
-      <ExperienceCard
-        timeline="September 2024 - Present"
-        role="Graduate Research Assistant"
-        name="Center of Geospatial Analysis, NC State"
-        description={[
-          <>
-            Improved raster data storage efficiency by <span className="font-medium text-slate-200">25%</span> using quantization algorithms
-          </>,
-          <>
-            Contributing to GRASS GIS open source project, focusing on backend optimization and code quality
-          </>,
-          <>
-            Implemented comprehensive testing suite for geospatial analysis functions
-          </>
-        ]}
-        skills={[
-          "Python",
-          "Geospatial Analysis",
-          "Open Source",
-          "Testing",
-          "Optimization"
-        ]}
-      />
 
       <ExperienceCard
         timeline="May 2021 - July 2023"

@@ -15,7 +15,7 @@ const TabbedProjects = () => {
       { id: 'security', label: 'Security' }
     ];
 
-    const projects = {
+    const projects = useMemo(() => ({
         backend: [
           {
             title: "Distributed Key-Value Store",
@@ -194,7 +194,7 @@ const TabbedProjects = () => {
             tech_used: ["Censys", "Shodan", "Network Security", "Web Security", "Security Analysis", "Vulnerability Assessment"]
           }
         ]
-      };
+    }), []);
       const allTechnologies = useMemo(() => {
         const techSet = new Set();
         Object.values(projects).forEach(projectList => {
@@ -204,102 +204,97 @@ const TabbedProjects = () => {
         });
         return Array.from(techSet).sort();
       }, [projects]);
-
-  // Filter projects based on selected technology
-  const filteredProjects = useMemo(() => {
-    if (!selectedTech) return projects[activeTab];
-    return projects[activeTab].filter(project => 
-      project.tech_used.includes(selectedTech)
-    );
-  }, [activeTab, selectedTech]);
-
-  const handleTabChange = async (tabId) => {
-    setIsLoading(true);
-    setActiveTab(tabId);
-    // Simulate loading delay
-    await new Promise(resolve => setTimeout(resolve, 300));
-    setIsLoading(false);
-  };
-
-  return (
-    <div id="projects" className="p-[50px] md:pt-[100px] md:pl-[100px]">
-      <h2 className="text-3xl font-bold mb-8 text-[#04d9ff]">
-        Projects
-      </h2>
-
-      {/* Technology Filter */}
-      <div className="mb-6">
-        <select 
-          className="bg-gray-700 text-white rounded px-4 py-2"
-          value={selectedTech}
-          onChange={(e) => setSelectedTech(e.target.value)}
-        >
-          <option value="">All Technologies</option>
-          {allTechnologies.map(tech => (
-            <option key={tech} value={tech}>{tech}</option>
-          ))}
-        </select>
-      </div>
-
-      {/* Tab Navigation */}
-      <div className="flex space-x-4 mb-8 border-b border-gray-700">
-        {tabs.map((tab) => (
-          <button
-            key={tab.id}
-            className={`pb-2 px-4 font-medium transition-colors duration-200 ${
-              activeTab === tab.id
-                ? 'text-[#04d9ff] border-b-2 border-[#04d9ff]'
-                : 'text-gray-400 hover:text-[#04d9ff]'
-            }`}
-            onClick={() => handleTabChange(tab.id)}
-          >
-            {tab.label}
-          </button>
-        ))}
-      </div>
-
-      {/* Projects Display */}
-      <AnimatePresence mode="wait">
-        {isLoading ? (
-          <div className="space-y-8">
-            {[1, 2, 3].map((i) => (
-              <SkeletonLoader key={i} type="project" />
+    
+      const filteredProjects = useMemo(() => {
+        if (!selectedTech) return projects[activeTab];
+        return projects[activeTab].filter(project => 
+          project.tech_used.includes(selectedTech)
+        );
+      }, [activeTab, selectedTech, projects]);
+    
+      const handleTabChange = async (tabId) => {
+        setIsLoading(true);
+        setActiveTab(tabId);
+        await new Promise(resolve => setTimeout(resolve, 300));
+        setIsLoading(false);
+      };
+    
+      return (
+        <div id="projects" className="p-[50px] md:pt-[100px] md:pl-[100px]">
+          <h2 className="text-3xl font-bold mb-8 text-[#04d9ff]">
+            Projects
+          </h2>
+    
+          <div className="mb-6">
+            <select 
+              className="bg-gray-700 text-white rounded px-4 py-2"
+              value={selectedTech}
+              onChange={(e) => setSelectedTech(e.target.value)}
+            >
+              <option value="">All Technologies</option>
+              {allTechnologies.map(tech => (
+                <option key={tech} value={tech}>{tech}</option>
+              ))}
+            </select>
+          </div>
+    
+          <div className="flex space-x-4 mb-8 border-b border-gray-700">
+            {tabs.map((tab) => (
+              <button
+                key={tab.id}
+                className={`pb-2 px-4 font-medium transition-colors duration-200 ${
+                  activeTab === tab.id
+                    ? 'text-[#04d9ff] border-b-2 border-[#04d9ff]'
+                    : 'text-gray-400 hover:text-[#04d9ff]'
+                }`}
+                onClick={() => handleTabChange(tab.id)}
+              >
+                {tab.label}
+              </button>
             ))}
           </div>
-        ) : (
-          <motion.div
-            key={activeTab}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
-            className="space-y-8"
-          >
-            {filteredProjects.map((project, index) => (
+    
+          <AnimatePresence mode="wait">
+            {isLoading ? (
+              <div className="space-y-8">
+                {[1, 2, 3].map((i) => (
+                  <SkeletonLoader key={i} type="project" />
+                ))}
+              </div>
+            ) : (
               <motion.div
-                key={index}
+                key={activeTab}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.3 }}
+                className="space-y-8"
               >
-                <ProjectCard
-                  project_title={project.title}
-                  project_description={project.description}
-                  project_url={project.url}
-                  tech_used={project.tech_used}
-                />
+                {filteredProjects.map((project, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                  >
+                    <ProjectCard
+                      project_title={project.title}
+                      project_description={project.description}
+                      project_url={project.url}
+                      tech_used={project.tech_used}
+                    />
+                  </motion.div>
+                ))}
+                {filteredProjects.length === 0 && (
+                  <p className="text-gray-400 text-center py-8">
+                    No projects found with the selected technology.
+                  </p>
+                )}
               </motion.div>
-            ))}
-            {filteredProjects.length === 0 && (
-              <p className="text-gray-400 text-center py-8">
-                No projects found with the selected technology.
-              </p>
             )}
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
-  );
-};
-
-export default TabbedProjects;
+          </AnimatePresence>
+        </div>
+      );
+    };
+    
+    export default TabbedProjects;

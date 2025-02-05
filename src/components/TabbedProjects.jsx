@@ -195,15 +195,15 @@ const TabbedProjects = () => {
           }
         ]
       };
-  const allTechnologies = useMemo(() => {
-    const techSet = new Set();
-    Object.values(projects).forEach(projectList => {
-      projectList.forEach(project => {
-        project.tech_used.forEach(tech => techSet.add(tech));
-      });
-    });
-    return Array.from(techSet).sort();
-  }, []);
+      const allTechnologies = useMemo(() => {
+        const techSet = new Set();
+        Object.values(projects).forEach(projectList => {
+          projectList.forEach(project => {
+            project.tech_used.forEach(tech => techSet.add(tech));
+          });
+        });
+        return Array.from(techSet).sort();
+      }, [projects]);
 
   // Filter projects based on selected technology
   const filteredProjects = useMemo(() => {

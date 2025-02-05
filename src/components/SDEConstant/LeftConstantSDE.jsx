@@ -31,7 +31,7 @@ const LeftConstantSDE = () => {
           <a href="https://www.linkedin.com/in/arohanajit" target="_blank" rel="noopener noreferrer" className="text-[#04d9ff] hover:text-white">
             <FontAwesomeIcon icon={faLinkedin} size="2x" />
           </a>
-          <a href="https://1drv.ms/w/c/76e8f46429a18a86/EUNIXnbA74dBgWlc841ZaDMBUhn9QDxJpt6Ls7M5EIOCUQ?e=6jQnbQ" target="_blank" rel="noopener noreferrer" className="text-[#04d9ff] hover:text-white">
+          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="text-[#04d9ff] hover:text-white">
             <FontAwesomeIcon icon={faFileAlt} size="2x" />
           </a>
         </div>

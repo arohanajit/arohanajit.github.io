@@ -1,11 +1,9 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
-import { ThemeContext } from '../../ThemeContext';
 
 const ProjectCard = props => {
     const { project_title, project_description, project_url, tech_used, project_image } = props;
-    const { darkMode } = useContext(ThemeContext);
 
     return (
         <motion.div 

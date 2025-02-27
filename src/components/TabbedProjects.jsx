@@ -64,6 +64,16 @@ const TabbedProjects = () => {
         ],
         cloud: [
           {
+            title: "Apache OpenWhisk on Kubernetes",
+            description: [
+              "Built a serverless computing environment by deploying Apache OpenWhisk on Kubernetes, enabling event-driven function execution at scale with container-based isolation and automated resource management",
+              "Implemented a comprehensive architecture including NGINX load balancer, controller, message queue (Kafka), and invoker components to facilitate robust serverless function deployment, execution, and monitoring",
+              "Developed automation scripts for cluster provisioning, node configuration, container orchestration, and verification testing, ensuring reliable deployment across diverse infrastructure environments"
+            ],
+            url: "https://github.com/arohanajit/OpenWhisk-Kubernetes",
+            tech_used: ["Kubernetes", "Docker", "Apache OpenWhisk", "Calico", "CouchDB", "Serverless"]
+          },
+          {
             title: "Multi-Cloud Infrastructure Framework",
             description: [
               "Led a project utilizing Locust to stress test an application URL, implementing AWS services like Lambda, S3, and SageMaker for secure file transfer and malware scanning.",
@@ -74,6 +84,16 @@ const TabbedProjects = () => {
           }
         ],
         ml: [
+          {
+            title: "ML Ops Platform",
+            description: [
+              "Architected an end-to-end MLOps platform with microservices for feature engineering, model training, and serving, utilizing Kubernetes for orchestration and Terraform for infrastructure as code",
+              "Implemented a distributed data pipeline using Kafka for streaming, Schema Registry for data validation, and Spark for batch processing, with a feature store combining Redis (online) and PostgreSQL (offline)",
+              "Developed robust CI/CD workflows, monitoring systems with Prometheus/Grafana, and created A/B testing capabilities for model deployment with extensive API interfaces for feature registry and model serving"
+            ],
+            url: "https://github.com/arohanajit/MLOps-Platform",
+            tech_used: ["Kubernetes", "Terraform", "Apache Kafka", "Apache Spark", "Redis", "MLFlow", "Prometheus", "Grafana", "CI/CD"]
+          },
           {
             title: "Mental Health Prediction Research",
             description: [

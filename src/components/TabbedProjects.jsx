@@ -235,7 +235,7 @@ const TabbedProjects = () => {
       const handleTabChange = async (tabId) => {
         setIsLoading(true);
         setActiveTab(tabId);
-        await new Promise(resolve => setTimeout(resolve, 300));
+        await new Promise(resolve => setTimeout(resolve, 200));
         setIsLoading(false);
       };
     
@@ -258,9 +258,9 @@ const TabbedProjects = () => {
             </select>
           </div>
     
-          <div className="flex space-x-4 mb-8 border-b border-gray-700">
+          <div className="flex space-x-4 mb-8 border-b border-gray-700 overflow-x-auto pb-1">
             {tabs.map((tab) => (
-              <button
+              <motion.button
                 key={tab.id}
                 className={`pb-2 px-4 font-medium transition-colors duration-200 ${
                   activeTab === tab.id
@@ -268,26 +268,42 @@ const TabbedProjects = () => {
                     : 'text-gray-400 hover:text-[#04d9ff]'
                 }`}
                 onClick={() => handleTabChange(tab.id)}
+                whileHover={{ y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                initial={false}
+                animate={activeTab === tab.id ? { scale: 1.05 } : { scale: 1 }}
+                transition={{ type: "spring", stiffness: 300, damping: 15 }}
               >
                 {tab.label}
-              </button>
+              </motion.button>
             ))}
           </div>
     
           <AnimatePresence mode="wait">
             {isLoading ? (
-              <div className="space-y-8">
+              <motion.div 
+                className="space-y-8"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.2 }}
+              >
                 {[1, 2, 3].map((i) => (
                   <SkeletonLoader key={i} type="project" />
                 ))}
-              </div>
+              </motion.div>
             ) : (
               <motion.div
                 key={activeTab}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.3 }}
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -20 }}
+                transition={{ 
+                  type: "spring", 
+                  stiffness: 300, 
+                  damping: 30, 
+                  duration: 0.4 
+                }}
                 className="space-y-8"
               >
                 {filteredProjects.map((project, index) => (
@@ -295,7 +311,12 @@ const TabbedProjects = () => {
                     key={index}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1 }}
+                    transition={{ 
+                      type: "spring",
+                      stiffness: 200,
+                      damping: 20,
+                      delay: index * 0.08 
+                    }}
                   >
                     <ProjectCard
                       project_title={project.title}
@@ -306,9 +327,14 @@ const TabbedProjects = () => {
                   </motion.div>
                 ))}
                 {filteredProjects.length === 0 && (
-                  <p className="text-gray-400 text-center py-8">
+                  <motion.p 
+                    className="text-gray-400 text-center py-8"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.2 }}
+                  >
                     No projects found with the selected technology.
-                  </p>
+                  </motion.p>
                 )}
               </motion.div>
             )}

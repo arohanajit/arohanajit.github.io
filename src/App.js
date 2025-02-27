@@ -1,16 +1,18 @@
 import "./App.css";
 import MainComponent from "./components/MainComponent";
-import React, { useEffect, useState } from 'react';
-
+import React from 'react';
+import { ThemeProvider } from './ThemeContext';
+import ThemeToggle from './components/utils/ThemeToggle';
 
 function App() {
-
   return (
-    <div className="bg-[#000000] ">
-      <MainComponent/>
-    </div>
+    <ThemeProvider>
+      <div className="min-h-screen bg-white dark:bg-[#000000] transition-colors duration-300">
+        <ThemeToggle />
+        <MainComponent />
+      </div>
+    </ThemeProvider>
   );
 }
-
 
 export default App;

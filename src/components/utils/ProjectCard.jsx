@@ -15,11 +15,11 @@ const ProjectCard = props => {
                 <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-[#ffffff1a] dark:lg:group-hover:bg-[#ffffff1a] lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
                 <div className="z-10 sm:order-2 sm:col-span-6">
                     <h3>
-                        <a className="inline-flex items-baseline font-medium leading-tight text-slate-800 dark:text-slate-200 hover:text-teal-500 dark:hover:text-teal-300 focus-visible:text-teal-300 group/link text-base" href={project_url} target="_blank" rel="noreferrer" aria-label={project_title}>
+                        <a className="inline-flex items-baseline font-medium leading-tight text-white hover:text-[#04d9ff] focus-visible:text-[#04d9ff] group/link text-base" href={project_url} target="_blank" rel="noreferrer" aria-label={project_title}>
                             <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
                             <span>
                                 <motion.span 
-                                    className="inline-block"
+                                    className="inline-block font-semibold"
                                     whileHover={{ x: 5 }}
                                     transition={{ type: "spring", stiffness: 400, damping: 10 }}
                                 >
@@ -31,13 +31,13 @@ const ProjectCard = props => {
                             </span>
                         </a>
                     </h3>
-                    <ul className="list-disc pl-5 mt-3 text-sm leading-normal text-gray-700 dark:text-gray-400">
+                    <ul className="list-disc pl-5 mt-3 text-sm leading-normal text-gray-200">
                         {project_description.map((desc, index) => (
                             <li key={index} className="mb-2">{desc}</li>
                         ))}
                     </ul>
                     <div className="mt-4">
-                        <h4 className="text-xs font-semibold text-gray-600 dark:text-gray-500 mb-2">Technologies Used:</h4>
+                        <h4 className="text-xs font-semibold text-gray-300 mb-2">Technologies Used:</h4>
                         <ul className="flex flex-wrap gap-2" aria-label="Technologies used:">
                             {tech_used.map((tech, index) => (
                                 <motion.li 
@@ -46,7 +46,7 @@ const ProjectCard = props => {
                                     whileTap={{ scale: 0.95 }}
                                     transition={{ type: "spring", stiffness: 400, damping: 17 }}
                                 >
-                                    <div className="flex items-center rounded-full bg-teal-100 dark:bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-800 dark:text-teal-300 shadow-sm">{tech}</div>
+                                    <div className="flex items-center rounded-full bg-[#04d9ff1a] px-3 py-1 text-xs font-medium leading-5 text-[#04d9ff] shadow-sm">{tech}</div>
                                 </motion.li>
                             ))}
                         </ul>
@@ -60,7 +60,7 @@ const ProjectCard = props => {
                         height="48" 
                         decoding="async" 
                         data-nimg="1" 
-                        className="rounded-md border-2 border-gray-200 dark:border-gray-800 shadow-sm transition group-hover:border-teal-300 dark:group-hover:border-teal-500 sm:order-1 sm:col-span-2 sm:translate-y-1" 
+                        className="rounded-md border-2 border-gray-800 shadow-sm transition group-hover:border-[#04d9ff] sm:order-1 sm:col-span-2 sm:translate-y-1" 
                         style={{ color: "transparent" }} 
                         src={project_image}
                         whileHover={{ scale: 1.05 }}
@@ -74,7 +74,10 @@ const ProjectCard = props => {
 
 ProjectCard.propTypes = {
     project_title: PropTypes.string.isRequired,
-    project_description: PropTypes.arrayOf(PropTypes.string).isRequired,
+    project_description: PropTypes.arrayOf(PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.node
+    ])).isRequired,
     project_url: PropTypes.string.isRequired,
     tech_used: PropTypes.arrayOf(PropTypes.string).isRequired,
     project_image: PropTypes.string

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const Experience = () => {
-  const [activeTab, setActiveTab] = useState("job1");
+  const [activeTab, setActiveTab] = useState("google");
 
   const openTab = (tabName) => {
     setActiveTab(tabName);
@@ -19,41 +19,61 @@ const Experience = () => {
           <div className="flex flex-row md:flex-col overflow-x-auto md:overflow-visible mb-4 md:mb-0 md:min-w-[200px] md:mr-8">
             <button
               className={`tab-button text-left py-3 px-4 border-b-2 md:border-b-0 md:border-l-2 border-gray-700 font-mono text-sm transition-all ${
-                activeTab === "job1" 
+                activeTab === "google"
                   ? "text-[#04d9ff] bg-gray-800 border-[#04d9ff] border-opacity-100" 
                   : "text-gray-400 hover:text-[#04d9ff] hover:bg-gray-800 hover:bg-opacity-30"
               }`}
-              onClick={() => openTab("job1")}
+              onClick={() => openTab("google")}
             >
-              Center of Geospatial Analysis
+              Google
             </button>
             <button
               className={`tab-button text-left py-3 px-4 border-b-2 md:border-b-0 md:border-l-2 border-gray-700 font-mono text-sm transition-all ${
-                activeTab === "job2" 
+                activeTab === "yahoo"
                   ? "text-[#04d9ff] bg-gray-800 border-[#04d9ff] border-opacity-100" 
                   : "text-gray-400 hover:text-[#04d9ff] hover:bg-gray-800 hover:bg-opacity-30"
               }`}
-              onClick={() => openTab("job2")}
+              onClick={() => openTab("yahoo")}
+            >
+              Yahoo
+            </button>
+            <button
+              className={`tab-button text-left py-3 px-4 border-b-2 md:border-b-0 md:border-l-2 border-gray-700 font-mono text-sm transition-all ${
+                activeTab === "ncsu"
+                  ? "text-[#04d9ff] bg-gray-800 border-[#04d9ff] border-opacity-100"
+                  : "text-gray-400 hover:text-[#04d9ff] hover:bg-gray-800 hover:bg-opacity-30"
+              }`}
+              onClick={() => openTab("ncsu")}
+            >
+              NC State University
+            </button>
+            <button
+              className={`tab-button text-left py-3 px-4 border-b-2 md:border-b-0 md:border-l-2 border-gray-700 font-mono text-sm transition-all ${
+                activeTab === "chirpn"
+                  ? "text-[#04d9ff] bg-gray-800 border-[#04d9ff] border-opacity-100"
+                  : "text-gray-400 hover:text-[#04d9ff] hover:bg-gray-800 hover:bg-opacity-30"
+              }`}
+              onClick={() => openTab("chirpn")}
             >
               Chirpn
             </button>
             <button
               className={`tab-button text-left py-3 px-4 border-b-2 md:border-b-0 md:border-l-2 border-gray-700 font-mono text-sm transition-all ${
-                activeTab === "job3" 
+                activeTab === "accenture"
                   ? "text-[#04d9ff] bg-gray-800 border-[#04d9ff] border-opacity-100" 
                   : "text-gray-400 hover:text-[#04d9ff] hover:bg-gray-800 hover:bg-opacity-30"
               }`}
-              onClick={() => openTab("job3")}
+              onClick={() => openTab("accenture")}
             >
               Accenture
             </button>
             <button
               className={`tab-button text-left py-3 px-4 border-b-2 md:border-b-0 md:border-l-2 border-gray-700 font-mono text-sm transition-all ${
-                activeTab === "job4" 
+                activeTab === "omdena"
                   ? "text-[#04d9ff] bg-gray-800 border-[#04d9ff] border-opacity-100" 
                   : "text-gray-400 hover:text-[#04d9ff] hover:bg-gray-800 hover:bg-opacity-30"
               }`}
-              onClick={() => openTab("job4")}
+              onClick={() => openTab("omdena")}
             >
               Omdena
             </button>
@@ -61,76 +81,118 @@ const Experience = () => {
 
           {/* Tab content */}
           <div className="tab-content-container flex-1">
-            {/* Job 1 */}
+            {/* Google */}
             <div 
               className={`tab-content transition-opacity duration-300 ${
-                activeTab === "job1" ? "block opacity-100" : "hidden opacity-0"
+                activeTab === "google" ? "block opacity-100" : "hidden opacity-0"
               }`}
             >
               <h3 className="text-xl font-semibold text-white mb-1">
-                Graduate Research Assistant{" "}
-                <span className="text-[#04d9ff]">@ Center of Geospatial Analysis, NC State</span>
+                Software Engineer{" "}
+                <span className="text-[#04d9ff]">@ Google</span>
               </h3>
-              <p className="text-sm font-mono text-gray-400 mb-4">September 2024 - Present</p>
+              <p className="text-sm font-mono text-gray-400 mb-4">October 2025 - Present | Seattle, WA</p>
               <ul className="job-description space-y-2 text-gray-300">
                 <li className="relative pl-7">
                   <span className="absolute left-0 text-[#04d9ff]">▹</span>
-                  Improved raster data storage efficiency by <span className="font-medium text-slate-200">25%</span> using quantization algorithms
+                  Designed and implemented novel metrics and automated systems for large-scale infrastructure capacity planning, enhancing disaster readiness and enabling proactive resource management.
                 </li>
                 <li className="relative pl-7">
                   <span className="absolute left-0 text-[#04d9ff]">▹</span>
-                  Contributing to GRASS GIS open source project, focusing on backend optimization and code quality
+                  Engineered and deployed robust, automated data pipelines using Python to process and analyze large datasets, creating dashboards to visualize key system reliability and capacity metrics for engineering teams.
                 </li>
                 <li className="relative pl-7">
                   <span className="absolute left-0 text-[#04d9ff]">▹</span>
-                  Implemented comprehensive testing suite for geospatial analysis functions
+                  Improved software quality and maintainability by refactoring complex, experimental scripts into modular, production-ready libraries with comprehensive testing, adhering to high coding standards.
+                </li>
+                <li className="relative pl-7">
+                  <span className="absolute left-0 text-[#04d9ff]">▹</span>
+                  Contributed to operational excellence and system reliability through participation in on-call rotations, root cause analysis of production issues, and contributions to technical design reviews.
+                </li>
+                <li className="relative pl-7">
+                  <span className="absolute left-0 text-[#04d9ff]">▹</span>
+                  Leveraged AI-powered tools for code generation, log analysis, and rapid prototyping to accelerate development cycles and enhance productivity.
+                </li>
+                <li className="relative pl-7">
+                  <span className="absolute left-0 text-[#04d9ff]">▹</span>
+                  Collaborated effectively in an agile, cross-functional environment on complex projects, contributing to project execution, milestone tracking, and integration of new components into large-scale workflows.
                 </li>
               </ul>
             </div>
 
-            {/* Job 2 */}
+            {/* Yahoo */}
             <div 
               className={`tab-content transition-opacity duration-300 ${
-                activeTab === "job2" ? "block opacity-100" : "hidden opacity-0"
+                activeTab === "yahoo" ? "block opacity-100" : "hidden opacity-0"
               }`}
             >
               <h3 className="text-xl font-semibold text-white mb-1">
-                Software Development & Cloud Intern{" "}
-                <span className="text-[#04d9ff]">@ Chirpn, San Jose, CA</span>
+                Software Engineer{" "}
+                <span className="text-[#04d9ff]">@ Yahoo</span>
               </h3>
-              <p className="text-sm font-mono text-gray-400 mb-4">June 2024 - Nov 2024</p>
+              <p className="text-sm font-mono text-gray-400 mb-4">June 2025 - September 2025 | Mountain View, CA</p>
               <ul className="job-description space-y-2 text-gray-300">
                 <li className="relative pl-7">
                   <span className="absolute left-0 text-[#04d9ff]">▹</span>
-                  Designed and implemented scalable integration solutions using Node.js/Express, improving system performance by <span className="font-medium text-slate-200">30%</span>
+                  Tech Stack: Python, Tensorflow, JAVA Rest APIs
                 </li>
                 <li className="relative pl-7">
                   <span className="absolute left-0 text-[#04d9ff]">▹</span>
-                  Integrated React frontend with Python/Node.js backends, improving UI responsiveness by <span className="font-medium text-slate-200">20%</span>
-                </li>
-                <li className="relative pl-7">
-                  <span className="absolute left-0 text-[#04d9ff]">▹</span>
-                  Automated AWS/GCP resource provisioning using CloudFormation, reducing infrastructure setup time by <span className="font-medium text-slate-200">50%</span>
-                </li>
-                <li className="relative pl-7">
-                  <span className="absolute left-0 text-[#04d9ff]">▹</span>
-                  Improved Kubernetes cluster resource efficiency by <span className="font-medium text-slate-200">20%</span> while maintaining <span className="font-medium text-slate-200">99.9%</span> uptime
-                </li>
-                <li className="relative pl-7">
-                  <span className="absolute left-0 text-[#04d9ff]">▹</span>
-                  Integrated OpenAI/Cohere LLMs into backend systems, increasing document processing efficiency by <span className="font-medium text-slate-200">50%</span>
-                </li>
-                <li className="relative pl-7">
-                  <span className="absolute left-0 text-[#04d9ff]">▹</span>
-                  Enhanced vector database performance by <span className="font-medium text-slate-200">30%</span> using LanceDB for real-time AI applications
+                  Worked with Mail Intelligence team to identify and implement end to end Agentic AI solutions and workflows
                 </li>
               </ul>
             </div>
 
-            {/* Job 3 */}
+            {/* NCSU */}
+            <div
+              className={`tab-content transition-opacity duration-300 ${
+                activeTab === "ncsu" ? "block opacity-100" : "hidden opacity-0"
+              }`}
+            >
+              <h3 className="text-xl font-semibold text-white mb-1">
+                Software Developer{" "}
+                <span className="text-[#04d9ff]">@ North Carolina State University</span>
+              </h3>
+              <p className="text-sm font-mono text-gray-400 mb-4">September 2024 - May 2025 | Raleigh, NC</p>
+              <ul className="job-description space-y-2 text-gray-300">
+                <li className="relative pl-7">
+                  <span className="absolute left-0 text-[#04d9ff]">▹</span>
+                  Improving raster data storage efficiency by <span className="font-medium text-slate-200">25%</span> using quantization algorithms, reducing cloud storage costs for large-scale datasets on one of the major open source geospatial analysis software GRASS
+                </li>
+              </ul>
+            </div>
+
+            {/* Chirpn */}
+            <div
+              className={`tab-content transition-opacity duration-300 ${
+                activeTab === "chirpn" ? "block opacity-100" : "hidden opacity-0"
+              }`}
+            >
+              <h3 className="text-xl font-semibold text-white mb-1">
+                Software Development Intern{" "}
+                <span className="text-[#04d9ff]">@ Chirpn</span>
+              </h3>
+              <p className="text-sm font-mono text-gray-400 mb-4">June 2024 - October 2024 | San Jose, CA</p>
+              <ul className="job-description space-y-2 text-gray-300">
+                <li className="relative pl-7">
+                  <span className="absolute left-0 text-[#04d9ff]">▹</span>
+                  Engineered and optimized critical API endpoints using Node.js and Express, improving data processing efficiency by <span className="font-medium text-slate-200">25%</span> and reducing server response times by <span className="font-medium text-slate-200">30%</span>
+                </li>
+                <li className="relative pl-7">
+                  <span className="absolute left-0 text-[#04d9ff]">▹</span>
+                  Integrated advanced AI models (OpenAI, Cohere) into the backend, boosting document processing and analysis efficiency by <span className="font-medium text-slate-200">50%</span>
+                </li>
+                <li className="relative pl-7">
+                  <span className="absolute left-0 text-[#04d9ff]">▹</span>
+                  Augmented vector database capabilities by incorporating providers like LanceDB, enhancing data retrieval efficiency by <span className="font-medium text-slate-200">30%</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Accenture */}
             <div 
               className={`tab-content transition-opacity duration-300 ${
-                activeTab === "job3" ? "block opacity-100" : "hidden opacity-0"
+                activeTab === "accenture" ? "block opacity-100" : "hidden opacity-0"
               }`}
             >
               <h3 className="text-xl font-semibold text-white mb-1">
@@ -158,10 +220,10 @@ const Experience = () => {
               </ul>
             </div>
 
-            {/* Job 4 */}
+            {/* Omdena */}
             <div 
               className={`tab-content transition-opacity duration-300 ${
-                activeTab === "job4" ? "block opacity-100" : "hidden opacity-0"
+                activeTab === "omdena" ? "block opacity-100" : "hidden opacity-0"
               }`}
             >
               <h3 className="text-xl font-semibold text-white mb-1">

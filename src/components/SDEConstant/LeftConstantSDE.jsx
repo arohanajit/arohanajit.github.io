@@ -12,11 +12,11 @@ const LeftConstantSDE = () => {
           Arohan Ajit
         </h1>
         <h2 className="text-xl font-medium tracking-tight mb-1">
-          CS Grad Student at{" "}
-          <span className="text-[#04d9ff] font-bold">NCSU</span>
+          Software Engineer @{" "}
+          <span className="text-[#04d9ff] font-bold">Google</span>
         </h2>
         <p className="text-lg text-gray-400 mb-8">
-          Aspiring SDE
+          Greater Seattle Area
         </p>
         <nav className="mb-8">
           <SectionScroll />
